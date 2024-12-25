@@ -123,20 +123,20 @@ function Library:Notify(data: {})
 	
 	local frame = CreateNotifGui()
 	
-	frame:FindFirstChild("message").Text = title
+	frame:WaitForChild("message").Text = title
 	
-	local textBoundsSize = frame:FindFirstChild("message").TextBounds
-	frame:FindFirstChild("message").Size = UDim2.new(0, textBoundsSize.X + 25, 1, 0)
+	local textBoundsSize = frame:WaitForChild("message").TextBounds
+	frame:WaitForChild("message").Size = UDim2.new(0, textBoundsSize.X + 25, 1, 0)
 	
-	frame:FindFirstChild("icon1").ImageRectOffset = icon.imageRectOffset
-	frame:FindFirstChild("icon1").ImageRectSize = icon.imageRectSize
+	frame:WaitForChild("icon1").ImageRectOffset = icon.imageRectOffset
+	frame:WaitForChild("icon1").ImageRectSize = icon.imageRectSize
 	
-	frame:FindFirstChild("icon2").ImageRectOffset = icon.imageRectOffset
-	frame:FindFirstChild("icon2").ImageRectSize = icon.imageRectSize
+	frame:WaitForChild("icon2").ImageRectOffset = icon.imageRectOffset
+	frame:WaitForChild("icon2").ImageRectSize = icon.imageRectSize
 	
 	icon = "rbxassetid://"..tostring(icon.id)
-	frame:FindFirstChild("icon1").Image = icon
-	frame:FindFirstChild("icon2").Image = icon
+	frame:WaitForChild("icon1").Image = icon
+	frame:WaitForChild("icon2").Image = icon
 	
 	frame:FindFirstChild("icon1").LayoutOrder = 1
 	frame:FindFirstChild("message").LayoutOrder = 2
