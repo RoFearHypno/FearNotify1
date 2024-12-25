@@ -60,12 +60,12 @@ function CreateNotifGui()
 	frame.BackgroundTransparency = 1
 	
 	local icon1 = Instance.new("ImageLabel")
-	icon1.Size = UDim2.new(0.05,0,1,0)
+	icon1.Size = UDim2.new(0,45,1,0)
 	icon1.BackgroundTransparency = 1
 	icon1.LayoutOrder = 1
 	icon1.Name = "icon1"
 	local icon2 = Instance.new("ImageLabel")
-	icon2.Size = UDim2.fromScale(0.05,0,1,0)
+	icon2.Size = UDim2.fromScale(0,45,1,0)
 	icon2.BackgroundTransparency = 1
 	icon2.LayoutOrder = 3
 	icon2.Name = "icon2"
