@@ -9,16 +9,18 @@ local CoreGui = game:GetService("CoreGui")
 
 local Library = {}
 
-if gethui then
-	NotifGui.Parent = gethui()
-elseif syn and syn.protect_gui then 
-	syn.protect_gui(NotifGui)
-	NotifGui.Parent = CoreGui
-elseif CoreGui:FindFirstChild("RobloxGui") then
-	NotifGui.Parent = CoreGui:FindFirstChild("RobloxGui")
-else
-	NotifGui.Parent = CoreGui
-end
+NotifGui.Parent = game.Players.LocalPlayer.PlayerGui
+
+--if gethui then
+--	NotifGui.Parent = gethui()
+--elseif syn and syn.protect_gui then 
+--	syn.protect_gui(NotifGui)
+--	NotifGui.Parent = CoreGui
+--elseif CoreGui:FindFirstChild("RobloxGui") then
+--	NotifGui.Parent = CoreGui:FindFirstChild("RobloxGui")
+--else
+--	NotifGui.Parent = CoreGui
+--end
 
 function GetIcon(name : string)
 	name = string.match(string.lower(name), "^%s*(.*)%s*$") :: string
