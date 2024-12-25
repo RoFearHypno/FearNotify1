@@ -64,17 +64,14 @@ function CreateNotifGui()
 	local icon1 = Instance.new("ImageLabel")
 	icon1.Size = UDim2.new(0,45,1,0)
 	icon1.BackgroundTransparency = 1
-	icon1.LayoutOrder = 1
 	icon1.Name = "icon1"
 	local icon2 = Instance.new("ImageLabel")
 	icon2.Size = UDim2.fromScale(0,45,1,0)
 	icon2.BackgroundTransparency = 1
-	icon2.LayoutOrder = 3
 	icon2.Name = "icon2"
 	
 	local message = Instance.new("TextLabel")
 	message.Size = UDim2.new(0,0,1,0)
-	message.LayoutOrder = 2
 	message.BackgroundTransparency = 0
 	message.Name = "message"
 	
@@ -139,7 +136,11 @@ function Library:Notify(data: {})
 	
 	icon = "rbxassetid://"..tostring(icon.id)
 	frame:FindFirstChild("icon1").Image = icon
-	frame:FindFirstChild("icon2").Image = icon	
+	frame:FindFirstChild("icon2").Image = icon
+	
+	frame:FindFirstChild("icon1").LayoutOrder = 1
+	frame:FindFirstChild("message").LayoutOrder = 2
+	frame:FindFirstChild("icon2").LayoutOrder = 3
 	
 	task.delay(duration, function()
 		frame:Destroy()
