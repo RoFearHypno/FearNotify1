@@ -138,9 +138,11 @@ function Library:Notify(data: {})
 	frame:WaitForChild("icon1").Image = icon
 	frame:WaitForChild("icon2").Image = icon
 	
-	frame:FindFirstChild("icon1").LayoutOrder = 1
-	frame:FindFirstChild("message").LayoutOrder = 2
-	frame:FindFirstChild("icon2").LayoutOrder = 3
+	frame:WaitForChild("icon1").LayoutOrder = 1
+	frame:WaitForChild("message").LayoutOrder = 2
+	frame:WaitForChild("icon2").LayoutOrder = 3
+	
+	warn(frame:WaitForChild("icon1").Parent,frame:WaitForChild("icon2").Parent)
 	
 	task.delay(duration, function()
 		frame:Destroy()
