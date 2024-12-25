@@ -131,8 +131,12 @@ function Library:Notify(data: {})
 	frame:WaitForChild("icon1").ImageRectOffset = icon.imageRectOffset
 	frame:WaitForChild("icon1").ImageRectSize = icon.imageRectSize
 	
+	warn("s")
+	
 	frame:WaitForChild("icon2").ImageRectOffset = icon.imageRectOffset
 	frame:WaitForChild("icon2").ImageRectSize = icon.imageRectSize
+	
+	warn("sigma")
 	
 	icon = "rbxassetid://"..icon.id
 	frame:WaitForChild("icon1").Image = icon
