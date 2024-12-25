@@ -83,9 +83,9 @@ function CreateNotifGui()
 	uilistlayout.SortOrder = Enum.SortOrder.LayoutOrder
 	
 	uilistlayout.Parent = frame
+	message.Parent = frame
 	icon1.Parent = frame 
 	icon2.Parent = frame 
-	message.Parent = frame
 	frame.Parent = NotifGui
 	
 	return frame
