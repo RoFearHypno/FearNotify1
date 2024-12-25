@@ -138,9 +138,13 @@ function Library:Notify(data: {})
 	frame:WaitForChild("icon1").Image = icon
 	frame:WaitForChild("icon2").Image = icon
 	
+	warn("what1")
+	
 	frame:WaitForChild("icon1").LayoutOrder = 1
 	frame:WaitForChild("message").LayoutOrder = 2
 	frame:WaitForChild("icon2").LayoutOrder = 3
+	
+	warn("what2")
 	
 	warn(frame:WaitForChild("icon1").Parent,frame:WaitForChild("icon2").Parent)
 	
