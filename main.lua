@@ -72,7 +72,7 @@ function CreateNotifGui()
 	
 	local message = Instance.new("TextLabel")
 	message.Size = UDim2.new(0,0,1,0)
-	message.BackgroundTransparency = 0
+	message.BackgroundTransparency = 1
 	message.Name = "message"
 	
 	local uilistlayout = Instance.new("UIListLayout")
